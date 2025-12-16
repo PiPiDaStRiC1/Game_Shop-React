@@ -5,12 +5,11 @@ export const ItemsCounter = () => {
 
     return (
         <>
-            {totalItems > 0 ? 
-            <div className="absolute block rounded-[50%] bg-emerald-700 w-[1rem] h-[1rem] top-[-0.4rem] right-[-0.4rem] z-10">
-                <span className='text-white text-[0.8rem] flex justify-center items-center h-full'>
+            {totalItems > 0 && (
+                <span className="absolute top-[-0.5rem] right-[-0.5rem] bg-gradient-to-r from-pink-500 to-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center shadow-lg">
                     {totalItems}
                 </span>
-            </div> : null}       
+            )}
         </>
     )
 }

@@ -4,7 +4,7 @@ export const Main = ({children}) => {
     return (
         <NotificationsProvider>
             <CartProvider>
-                    <main className="relative min-h-[calc(100vh-128px)] p-5 w-full bg-emerald-100">
+                    <main className="relative min-h-[calc(100vh-196px)] p-5 w-full bg-emerald-100">
                         {children}
                     </main>
             </CartProvider>
