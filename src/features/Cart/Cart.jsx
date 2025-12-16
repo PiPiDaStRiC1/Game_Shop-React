@@ -28,16 +28,24 @@ export const Cart = ({children}) => {
                     fixed
                     w-[3.5rem]
                     h-[3.5rem]
-                    bg-emerald-300
-                    top-[4rem]
+                    bg-gradient-to-r 
+                    from-purple-500 
+                    to-pink-500 
+                    top-[7rem]
                     right-0
                     rounded-[5px]
                     shadow-lg
                     m-5
                     justify-center
                     items-center
-                    hover:bg-emerald-400
+                    hover:from-purple-550 
+                    hover:to-pink-550 
                     z-10
+                    rounded-xl
+                    transition-all 
+                    duration-300 
+                    active:scale-95
+                    hover:shadow-purple-500/50
                 "
                 onClick={open}
                 >
@@ -46,7 +54,7 @@ export const Cart = ({children}) => {
             </button>
             {isMounted && (
                 <div 
-                    className="bg-black/50 fixed top-0 left-0 w-full h-full flex justify-center items-start z-20 p-5" 
+                    className="bg-black/50 fixed top-0 left-0 w-full h-full flex justify-center items-center z-20 p-5" 
                     onClick={close}
                 >
                     <CartModal 
