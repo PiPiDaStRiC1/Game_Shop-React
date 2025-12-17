@@ -9,7 +9,9 @@
   "scripts": {
     "downland": "npm i react react-dom --save && npm i parcel -D",
     "start": "parcel index.html --open",
-    "build": "parcel build index.html --dist-dir build --public-url ./"
+    "build": "parcel build index.html --dist-dir build --public-url ./",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "lucide-react": "^0.561.0",
