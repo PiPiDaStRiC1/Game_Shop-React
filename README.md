@@ -8,7 +8,7 @@ A web application for purchasing items from Fortnite. A modern React application
 
 ## 🎥 DEMO
 
-> **Live Demo:** [View Application](https://your-demo-url.com) *(coming soon)*
+**Live Demo:** [View Application](https://pipidastric1.github.io/Game_Shop-React/)
 
 ### 🖼️ Screenshots
 
