@@ -6,6 +6,35 @@ A web application for purchasing items from Fortnite. A modern React application
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.19-06B6D4?logo=tailwindcss)
 ![Parcel](https://img.shields.io/badge/Parcel-2.16.3-41B883?logo=parcel)
 
+## 🎥 DEMO
+
+> **Live Demo:** [View Application](https://your-demo-url.com) *(coming soon)*
+
+### 🖼️ Screenshots
+
+
+# 📱 Main Page - Item Catalog
+
+## Desktop
+
+![Main Page Desktop](./src/assets/demo/desktop_view.png)
+
+## Mobile
+
+*Browse through 20+ Fortnite items with beautiful card design and smooth loading animations*
+
+![Main Page Mobile](./src/assets/demo/mobile_view.png)
+
+# 🛒 Shopping Cart
+
+*Manage your items with quantity controls, see total price, and checkout with ease*
+
+![Shopping Cart](./src/assets/demo/desktop_view__with_cart.png)
+
+
+
+
+
 ## ✨ Key Features
 
 - 🛒 **Shopping Cart** - add and remove items
