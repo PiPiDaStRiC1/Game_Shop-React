@@ -1,5 +1,5 @@
 import {CartItem} from './CartItem.jsx';
-import {useCartContext} from '../common/index'
+import {useCartContext} from '../providers/index'
 
 export const CartModal = (props) => {
     const {animation, onClick} = props;

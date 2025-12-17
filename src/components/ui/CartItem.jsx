@@ -1,4 +1,4 @@
-import {useCartContext} from '../common/index';
+import {useCartContext} from '../providers/index';
 import {useNotifications} from '../../hooks/index'
 
 export const CartItem = (props) => {
@@ -10,7 +10,7 @@ export const CartItem = (props) => {
 
     return (
         <>
-        {itemQuantity ?         
+        {itemQuantity ?
             <li className="flex justify-between items-center bg-gradient-to-r from-gray-800 to-gray-900 p-4 rounded-xl shadow-lg border border-gray-700">
                 <div className="flex flex-col gap-1 flex-1">
                     <span className="font-bold text-lg text-white">{name}</span>

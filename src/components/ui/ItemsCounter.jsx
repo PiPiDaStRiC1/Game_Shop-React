@@ -1,4 +1,4 @@
-import {useCartContext} from '../common/index';
+import {useCartContext} from '../providers/index';
 
 export const ItemsCounter = () => {
     const {totalItems} = useCartContext();

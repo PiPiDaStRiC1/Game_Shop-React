@@ -1,4 +1,4 @@
-import {CartProvider, NotificationsProvider} from './index';
+import {CartProvider, NotificationsProvider} from '../providers/index';
 
 export const Main = ({children}) => {
     return (

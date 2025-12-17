@@ -1,4 +1,4 @@
-import {useCartContext} from '../common/index'
+import {useCartContext} from '../providers/index'
 
 export const FTItem = (props) => {
     const {id, name, description, price, images} = props;
@@ -11,6 +11,7 @@ export const FTItem = (props) => {
                     src={images.full_background} 
                     alt={name} 
                     className="object-top w-full xsm:h-[28rem] sm:h-[14rem] md:h-[12rem] lg:h-[15rem] object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading='lazy'
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
                 <div className="absolute top-3 right-3 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">

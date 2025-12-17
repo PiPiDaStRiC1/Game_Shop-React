@@ -43,9 +43,8 @@ src/
 │   └── useNotifications.jsx # Notifications management
 ├── lib/
 │   ├── api/                 # API functions
-│   │   ├── fetchFTItems.jsx # Fetch items
-│   │   └── apiConfig.jsx    # API configuration
-│   └── utils/               # Utility functions
+│       ├── fetchFTItems.jsx # Fetch items
+│       └── apiConfig.jsx    # API configuration
 └── styles/
     └── style.scss           # Global styles
 ```

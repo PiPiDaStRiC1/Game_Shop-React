@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from "react"
 import {useNotifications} from './useNotifications'
 
 export const useCart = (key = 'cart') => {
-    const {addNotification, removeNotification} = useNotifications();
+    const {addNotification} = useNotifications();
 
     const [storage, setStorage] = useState(() => {
         try {
