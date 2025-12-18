@@ -25,14 +25,26 @@ export const FTItems = () => {
             {isLoading ? 
                 <div className="flex flex-col items-center gap-4 py-20">
                     <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
-                    <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Loading awesome items...</h1>
+                    <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent text-center">Loading awesome items...</h1>
                 </div> : 
                 error ? 
-                <div className="flex flex-col items-center gap-4 py-20">
+                <div className="flex flex-col items-center gap-2 py-20">
                     <div className="text-6xl">⚠️</div>
-                    <h1 className="text-xl text-red-400 font-semibold">{error.message}</h1>
+                    <h1 className="text-xl text-red-400 font-semibold text-center">{error.message}</h1>
+                    <h1 className="text-xl text-red-400 font-semibold text-center">
+                        Maybe{" "}
+                        <a
+                            href="https://fortniteapi.io"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline text-red hover:text-red-600"
+                        >
+                            fortniteapi.io
+                        </a>{" "}
+                        is not available now
+                    </h1>
                 </div> :
-                data && data.slice(0, 20).map(item => <FTItem key={item.id} {...item}/>)
+                data && data.slice(0, 30).map(item => <FTItem key={item.id} {...item}/>)
             }
         </div>
     )

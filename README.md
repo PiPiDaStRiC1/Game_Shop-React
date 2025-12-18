@@ -32,9 +32,6 @@ A web application for purchasing items from Fortnite. A modern React application
 ![Shopping Cart](./src/assets/demo/desktop_view__with_cart.png)
 
 
-
-
-
 ## ✨ Key Features
 
 - 🛒 **Shopping Cart** - add and remove items
@@ -139,11 +136,10 @@ The application loads items data through the `fetchFTItems()` function, which ma
 
 ## 🔑 API Configuration
 
-Create a file `src/lib/api/apiConfig.jsx` with your keys:
+Create a file `.env` with your key as in example file `.env.example`:
 
 ```javascript
-export const API_KEY = 'your_api_key';
-export const API_URL = 'https://api.fortnite.com/...';
+FORTNITE_API_KEY=your_api_key_here
 ```
 
 ## 💻 Available Scripts

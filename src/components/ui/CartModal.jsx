@@ -51,19 +51,19 @@ export const CartModal = (props) => {
             
             <div className="border-t border-gray-700 pt-4 flex justify-between items-center">
                 <span className="text-white text-xl">
-                    <span className="text-gray-400">Total:</span> <span className="font-bold text-2xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">{totalPrice} V-Bucks</span>
+                    <span className="text-gray-400 select-none">Total:</span> <span className="font-bold text-2xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">{totalPrice} V-Bucks</span>
                 </span>
             </div>
             
             <div className="flex gap-3">
                 <button 
-                    className="flex-1 text-[0.9rem] xxsm:text-[1rem] bg-gradient-to-r from-purple-600 to-pink-600 p-4 rounded-xl shadow-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-bold text-white text-lg hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex-1 text-[0.9rem] xxsm:text-[1rem] select-none bg-gradient-to-r from-purple-600 to-pink-600 p-4 rounded-xl shadow-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-bold text-white text-lg hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                     disabled={!totalItems}
                 >
                     {totalItems ? 'Order' : 'Add items to order'}
                 </button>
                 <button 
-                    className="px-6 text-[0.9rem] xxsm:text-[1rem] bg-gradient-to-r from-red-600 to-pink-600 p-4 rounded-xl shadow-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 font-bold text-white hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 text-[0.9rem] xxsm:text-[1rem] select-none bg-gradient-to-r from-red-600 to-pink-600 p-4 rounded-xl shadow-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 font-bold text-white hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                     disabled={!totalItems}
                     onClick={() => {
                         Object.keys(storage).forEach(id => {
