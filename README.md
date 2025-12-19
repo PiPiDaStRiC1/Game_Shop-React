@@ -44,9 +44,9 @@ A web application for purchasing items from Fortnite. A modern React application
 
 ```
 src/
-├── App/                      # Main application component
+├── App/                     # Main application component
 │   └── App.jsx
-├── components/               # Reusable components
+├── components/              # Reusable components
 │   ├── common/              # Common components
 │   │   ├── Main.jsx         # Main content area
 │   │   ├── CartProvider.jsx # Cart provider
@@ -67,11 +67,13 @@ src/
 │   ├── useCart.jsx          # Cart management
 │   └── useNotifications.jsx # Notifications management
 ├── lib/
-│   ├── api/                 # API functions
-│       ├── fetchFTItems.jsx # Fetch items
-│       └── apiConfig.jsx    # API configuration
+│   └── api/                 # API functions
+│       └── fetchFTItems.jsx # Fetch items via serverless
+├── api/                     # Vercel serverless functions
+│   └── items.js             # Proxy to fortniteapi.io with limiting
+├── vercel.json              # Vercel config (build + functions)
 └── styles/
-    └── style.scss           # Global styles
+   └── style.scss            # Global styles
 ```
 
 ## 🚀 Quick Start
@@ -93,12 +95,19 @@ src/
    npm install
    ```
 
-3. **Run the application**
+3. **Run the application (with serverless locally)**
    ```bash
-   npm start
+   # Install Vercel CLI once
+   npm i -g vercel
+
+   # Pull environment variables to a local file (do not commit)
+   vercel env pull .env.local
+
+   # Start dev with serverless functions
+   vercel dev
    ```
 
-   The application will open in your browser at `http://localhost:1234`
+   Note: plain `npm start` (Parcel) does not start serverless routes `/api/*`. Use `vercel dev` for correct behavior.
 
 ### Build for Production
 
@@ -107,6 +116,26 @@ npm run build
 ```
 
 Built files will be located in the `build/` folder
+
+### Deploy (Vercel)
+
+Dashboard (recommended):
+
+1. Go to https://vercel.com/new and import your repository 
+2. Settings:
+   - Build Command: `npm run build`
+   - Output Directory: `build`
+3. Add `FORTNITE_API_KEY` in Environment Variables (Production + Preview)
+4. Deploy — you get a public URL like `https://<project>.vercel.app`
+
+CLI:
+```bash
+npm i -g vercel
+vercel          # initial project linking
+vercel env add FORTNITE_API_KEY production
+vercel env add FORTNITE_API_KEY preview
+vercel --prod   # deploy to production
+```
 
 ## 📦 Installing Dependencies from Scratch
 
@@ -131,15 +160,20 @@ npm run downland
 
 ### API Integration
 
-The application loads items data through the `fetchFTItems()` function, which makes requests to the Fortnite API using an API key.
+Frontend calls server route `/api/items?limit=<number>` (see `api/items.js`), which proxies the request to fortniteapi.io and limits the number of returned items. The API key is stored in Vercel environment variables.
 
-## 🔑 API Configuration
+## 🔑 API Key & Environment
 
-Create a file `.env` with your key as in example file `.env.example`:
-
-```javascript
-FORTNITE_API_KEY=your_api_key_here
-```
+1. Sign up at [fortniteapi.io](https://fortniteapi.io) and get your API key.
+2. In Vercel → Project Settings → Environment Variables add:
+   - Name: `FORTNITE_API_KEY`
+   - Value: your key
+   - Environments: Production + Preview
+3. For local dev (with `vercel dev`) pull variables:
+   ```bash
+   vercel env pull .env.local
+   ```
+   The `.env.local` file is used only locally and is ignored by git.
 
 ## 💻 Available Scripts
 
