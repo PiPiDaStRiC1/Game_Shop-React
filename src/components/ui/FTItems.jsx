@@ -44,7 +44,9 @@ export const FTItems = () => {
                         is not available now
                     </h1>
                 </div> :
-                data && data.slice(0, 30).map(item => <FTItem key={item.id} {...item}/>)
+                data && data.slice(0, 30).map((item, index) => (
+                    <FTItem key={item.id} index={index} {...item} />
+                ))
             }
         </div>
     )

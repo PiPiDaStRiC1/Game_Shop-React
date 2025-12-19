@@ -1,8 +1,9 @@
 import {useCartContext} from '../providers/index'
 
 export const FTItem = (props) => {
-    const {id, name, description, price, images} = props;
+    const {id, name, description, price, images, index = 0} = props;
     const {addItem} = useCartContext();
+    const isEager = index < 4; // первые 4 карточки грузим сразу
 
     return (
         <div className="group flex flex-col w-[28rem] sm:w-[16rem] md:w-[13rem] lg:w-[16rem] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl justify-between overflow-hidden shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-105 border border-gray-700">
@@ -11,7 +12,9 @@ export const FTItem = (props) => {
                     src={images.full_background} 
                     alt={name} 
                     className="object-top w-full xsm:h-[28rem] sm:h-[14rem] md:h-[12rem] lg:h-[15rem] object-cover group-hover:scale-110 transition-transform duration-500"
-                    loading='lazy'
+                    loading={isEager ? 'eager' : 'lazy'}
+                    fetchpriority={isEager ? 'high' : 'auto'}
+                    decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
                 <div className="absolute top-3 right-3 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">

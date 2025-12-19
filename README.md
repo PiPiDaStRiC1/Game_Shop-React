@@ -6,14 +6,13 @@ A web application for purchasing items from Fortnite. A modern React application
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.19-06B6D4?logo=tailwindcss)
 ![Parcel](https://img.shields.io/badge/Parcel-2.16.3-41B883?logo=parcel)
 
-## 🎥 DEMO
+## **Live Demo (Vercel):** [View Application](https://game-shop-react-kappa.vercel.app/)
 
-**Live Demo:** [View Application](https://pipidastric1.github.io/Game_Shop-React/)
+## **Search Code (Github):** [View Code](https://pipidastric1.github.io/Game_Shop-React/)
 
-### 🖼️ Screenshots
+## 🖼️ Screenshots
 
-
-# 📱 Main Page - Item Catalog
+## 📱 Main Page - Item Catalog
 
 ## Desktop
 
@@ -25,7 +24,7 @@ A web application for purchasing items from Fortnite. A modern React application
 
 ![Main Page Mobile](./src/assets/demo/mobile_view.png)
 
-# 🛒 Shopping Cart
+## 🛒 Shopping Cart
 
 *Manage your items with quantity controls, see total price, and checkout with ease*
 
