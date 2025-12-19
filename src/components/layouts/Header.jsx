@@ -6,7 +6,7 @@ export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="relative flex justify-between items-center h-20 px-8 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white gap-[1rem] shadow-2xl">
+        <header className="relative flex justify-between items-center h-20 px-8 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-400 text-white gap-[1rem] shadow-2xl">
             <div className="absolute inset-0 bg-black opacity-10"></div>
             <a href="#" className="relative text-2xl xxsm:text-3xl font-bold tracking-wider hover:scale-105 transition-transform duration-300 drop-shadow-lg lg:text-2xl">
                 🎮 Fortnite Shop

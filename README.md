@@ -8,7 +8,7 @@ A web application for purchasing items from Fortnite. A modern React application
 
 ## **Live Demo (Vercel):** [View Application](https://game-shop-react-kappa.vercel.app/)
 
-## **Search Code (Github):** [View Code](https://pipidastric1.github.io/Game_Shop-React/)
+## **Search Code (Github):** [View Code](https://github.com/PiPiDaStRiC1/Game_Shop-React)
 
 ## 🖼️ Screenshots
 

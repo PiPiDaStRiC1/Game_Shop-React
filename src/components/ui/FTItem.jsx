@@ -3,7 +3,7 @@ import {useCartContext} from '../providers/index'
 export const FTItem = (props) => {
     const {id, name, description, price, images, index = 0} = props;
     const {addItem} = useCartContext();
-    const isEager = index < 4; // первые 4 карточки грузим сразу
+    const isEager = index < 4; 
 
     return (
         <div className="group flex flex-col w-[28rem] sm:w-[16rem] md:w-[13rem] lg:w-[16rem] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl justify-between overflow-hidden shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-105 border border-gray-700">
